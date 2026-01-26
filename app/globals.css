@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@tailwind utilities;
+.skill-item-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #23272a;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 20;
+}
+
+.skill-item-wrapper:hover .skill-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-16px);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 16px;
+}
+/*  */
+.project-row {
+  display: flex;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  min-height: 55px;
+  max-height: 85px;
+  background: #23272a;
+  color: #f3f3f3;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 16px;
+  text-decoration: none;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.project-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  background: #2c3136;
+}
+.project-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+}
+.project-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #b0b6bc;
+}
+
+.projects-page .project-card {
+  width: 100%;
+  max-width: 520px;
+  min-height: 120px;
+  max-height: none;
+}
+
+#profile-img {
+  border-radius: 50%;
+  height: 200px;
+  display: inline-block;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 900;
+}
+#name {
+  font-size: 40px;
+}
+
+#quote {
+  color: #d1d5db;
+}
+
+#github-link {
+  color: rgb(5, 188, 255);
+  display: block;
+}
+
+.text-box {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.container {
+  margin: 5px auto;
+  color: white;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.intro {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.skills {
+  display: inline-block;
+  text-align: center;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill-div {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 320px;
+  text-align: center;
+}
+
+.skill-item {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.min-h-screen {
+  z-index: -2;
+}
+
+/*  */
+
+@media (max-width: 770px) {
+  .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*  */
+#bg {
+  z-index: -100;
+}
