@@ -1,4 +1,4 @@
-'use client'
+
 
 export default function Contact() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
