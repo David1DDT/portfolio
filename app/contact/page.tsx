@@ -1,4 +1,4 @@
-
+"use client"
 
 export default function Contact() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,7 +20,8 @@ export default function Contact() {
                 <div className="container" style={{ paddingTop: '4rem' }}>
                     <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '2rem' }}>Contact Me</h1>
 
-                    <div style={{ maxWidth: '800px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center' }}>
+                    <div className="contactGrid">
+
                         <div>
                             <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#a5b4fc' }}>Get in Touch</h2>
                             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#b0b0b0', marginBottom: '2rem' }}>

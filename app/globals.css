@@ -164,6 +164,20 @@ h2 {
 }
 
 /*  */
+.contactGrid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 770px) {
   .middle {
@@ -173,7 +187,7 @@ h2 {
     align-items: center;
   }
 }
-/*  */
+
 #bg {
   z-index: -100;
 }
