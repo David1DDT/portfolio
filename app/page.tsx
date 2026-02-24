@@ -5,7 +5,7 @@ export default function Home() {
       {/* INTRO */}
       <div className="background bg-white/10 backdrop-blur-[2.5px] container">
         <div className="container intro">
-          <img src="https://avatars.githubusercontent.com/u/123823881?v=4" id="profile-img" alt="David Dumitru" />
+          <img src="image.png" id="profile-img" alt="David Dumitru" />
           <div className="text-box">
             <h1 id="name">David Dumitru</h1>
             <a href="https://github.com/David1DDT" id="github-link">@David1DDT</a>
