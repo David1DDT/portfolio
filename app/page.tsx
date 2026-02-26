@@ -7,7 +7,7 @@ export default function Home() {
         <div className="container intro">
           <img src="image.png" id="profile-img" alt="David Dumitru" />
           <div className="text-box">
-            <h1 id="name">David Dumitru</h1>
+            <h1 id="name">David Dumitru  -  <span className="text-blue-200">Full Stack Developer</span></h1>
             <a href="https://github.com/David1DDT" id="github-link">@David1DDT</a>
             <i id="quote">"Great code weaves logic & creativity into a path where art comes alive."</i>
             <p>📍 Romania</p>
