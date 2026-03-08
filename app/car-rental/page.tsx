@@ -4,7 +4,9 @@ async function BlogPostPage() {
 
 
     if (process.env.ISACTIVE !== 'true') {
-        return notFound()
+        return (
+            <h1>Not Found</h1>
+        )
     }
 
     return (
