@@ -191,3 +191,13 @@ h2 {
 #bg {
   z-index: -100;
 }
+
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
