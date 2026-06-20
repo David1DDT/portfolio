@@ -30,6 +30,7 @@ const StarBackground = forwardRef<StarBackgroundHandles>((_, ref) => {
     const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const animationFrameRef = useRef<number | null>(null);
     const tailOpacityRef = useRef(0);
+    const extraMargin = 50;
 
     // Right movement
     const moveRightRef = useRef(false);
@@ -45,8 +46,12 @@ const StarBackground = forwardRef<StarBackgroundHandles>((_, ref) => {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
-        canvas.width = window.innerWidth;
+        const width = window.innerWidth + extraMargin * 2;
+        canvas.width = width;
         canvas.height = window.innerHeight;
+        canvas.style.left = `-${extraMargin}px`;
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${window.innerHeight}px`;
 
         const stars: Star[] = [];
         const starCount = 80;
@@ -216,8 +221,12 @@ const StarBackground = forwardRef<StarBackgroundHandles>((_, ref) => {
         const handleResize = () => {
             const canvas = canvasRef.current;
             if (!canvas) return;
-            canvas.width = window.innerWidth;
+            const width = window.innerWidth + extraMargin * 2;
+            canvas.width = width;
             canvas.height = window.innerHeight;
+            canvas.style.left = `-${extraMargin}px`;
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${window.innerHeight}px`;
         };
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
